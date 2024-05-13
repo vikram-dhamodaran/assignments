@@ -9,6 +9,13 @@
 		price: 10,
 		category: 'Food',
 		itemName: 'Pizza',
+	},
+  {
+		id: 2,
+		timestamp: 1656076800000,
+		price: 20,
+		category: 'Travel',
+		itemName: 'Airline',
 	}
   Output - [{ category: 'Food', totalSpent: 10 }] // Can have multiple categories, only one example is mentioned here
 */
@@ -16,7 +23,8 @@
 function calculateTotalSpentByCategory(transactions) {
 
   const response = [];
-  transactions.forEach((transaction) => {
+  transactions.forEach((transaction) => 
+  {
     let responsecategory = response.find((item) => item.category === transaction.category);
 
     if(responsecategory)

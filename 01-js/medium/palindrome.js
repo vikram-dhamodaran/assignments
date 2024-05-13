@@ -4,6 +4,19 @@
 */
 
 function isPalindrome(str) {
+
+  var re = /[\W_]/g;
+  var lowRegStr = str.toLowerCase().replace(re, '');
+
+  let j = lowRegStr.length - 1;
+  for(let i = 0 ; i < lowRegStr.length/ 2; i++)
+  {
+    if(lowRegStr[i] != lowRegStr[j])
+    {
+      return false;
+    }
+    j--;
+  }
   return true;
 }
 
